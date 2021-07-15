@@ -3,23 +3,23 @@
 </p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/nlnadialigia/todo-list?color=52006a&style=plastic">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/nlnadialigia/todo-list-ngrx?color=DA0037&style=plastic">
 
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/nlnadialigia/todo-list?color=52006a&style=plastic">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/nlnadialigia/todo-list-ngrx?color=DA0037&style=plastic">
 
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nlnadialigia/todo-list?color=52006a&style=plastic">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nlnadialigia/todo-list-ngrx?color=DA0037&style=plastic">
 
-  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nlnadialigia/todo-list?color=52006a&style=plastic">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nlnadialigia/todo-list-ngrx?color=DA0037&style=plastic">
 
   <a href="./LICENSE.md">
-    <img alt="License" src="https://img.shields.io/github/license/nlnadialigia/todo-list?color=52006a&style=plastic">
+    <img alt="License" src="https://img.shields.io/github/license/nlnadialigia/todo-list-ngrx?color=DA0037&style=plastic">
   </a>
 </p>
 <br>
 
-<p align="center">
-  <img src=".github/example.gif" width=400 alt="Course Manager" />
-</p>
+<!-- <p align="center">
+  <img src=".github/example.gif" width=400 alt="Gif Example" />
+</p> -->
 
 # Índice
 
@@ -34,7 +34,7 @@
 
 Projeto desenvolvido no estudo dos conceitos avançados do framework Angular 8 no BootCamp FullStack Santander.
 
-Para o ensinamento dos conhecimentos avançados foi desenvolvida uma aplicação de `to do list`, contendo a página de login, uma página para registrar novos `todos` e visualizar os últimos 10 `todos` e uma página com a lista de todos dos `todos`.
+Neste projeto foi aplicado o [NGRX](https://ngrx.io/) para desenvolvimento de uma aplicação de `todo list` contendo página de login, página de criação de `todo`, onde constam os 10 últimos `todos` criados e a página com todos os `todos`.
 
 <br>
 
@@ -42,10 +42,10 @@ Para o ensinamento dos conhecimentos avançados foi desenvolvida uma aplicação
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/nlnadialigia/todo-list.git
+$ git clone https://github.com/nlnadialigia/todo-list-ngrx.git
 
 # Entre no repositório
-$ cd todo-list
+$ cd todo-list-ngrx
 
 # Instale as dependências
 $ yarn
@@ -62,8 +62,9 @@ http://localhost:4200/
 # 🛠 Tecnologias
 
 - [Angular](https://angular.io/)
-- [Typescript](https://www.typescriptlang.org/)
+- [NGRX](https://ngrx.io/)
 - [Nodejs](https://nodejs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 
 <br>
 
