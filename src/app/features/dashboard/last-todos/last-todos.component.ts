@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { AppState } from 'src/app/state/app.reducer';
+import { Todo } from '../../../shared/models/todo.model';
+import * as fromListAction from '../state/list.actions';
+import * as fromListSelectors from '../state/list.selectors';
 
 @Component({
   selector: 'todo-last-todos',
@@ -6,23 +13,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./last-todos.component.scss']
 })
 export class LastTodosComponent implements OnInit {
-  list = [
-    {
-      id: 0,
-      createdAt: new Date(),
-      title: 'Modelo 1',
-      done: true
-    },
-    {
-      id: 1,
-      createdAt: new Date(),
-      title: 'Modelo 2',
-      done: false
-    }
-  ];
-  constructor() {}
+  list$!: Observable<Todo[]>;
+  loading$!: Observable<boolean>;
 
-  ngOnInit(): void {}
+  constructor(private store: Store<AppState>) {}
+
+  ngOnInit() {
+    this.store.dispatch(fromListAction.loadListFromLastTodos());
+
+    this.list$ = this.store
+      .select(fromListSelectors.selectListEntities)
+      .pipe(map((entities) => entities.slice(0, 10)));
+    this.loading$ = this.store.select(fromListSelectors.selectListLoading);
+  }
 
   markAsDone(id: number) {}
 }

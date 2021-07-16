@@ -28,7 +28,8 @@
     "no-console": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "prettier/prettier": "off",
-    "@typescript-eslint/no-unused-vars": "off"
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "overrides": [
     {
@@ -60,7 +61,8 @@
           }
         ],
         "ngrx/select-style": "error",
-        "@angular-eslint/no-empty-lifecycle-method": "off"
+        "ngrx/on-function-explicit-return-type": "off",
+        "ngrx/no-typed-global-store": "off"
       },
       "plugins": ["ngrx"]
     },

@@ -2,4 +2,6 @@
 
 <input [formControl]="titleControl">
 
-<button class="primary" (click)="save()">Salvar</button>
+<button *ngIf="(creating$ | async) === false" class="primary" (click)="save()">Salvar</button>
+
+<span *ngIf="(creating$ | async) === true">Carregando</span>
