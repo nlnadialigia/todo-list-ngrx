@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './features/login/login.module';
+import { AppEffects } from './state/app.effects';
 import { reducer } from './state/app.reducer';
 
 @NgModule({
@@ -23,7 +24,7 @@ import { reducer } from './state/app.reducer';
       maxAge: 25,
       logOnly: environment.production
     }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AppEffects]),
     StoreRouterConnectingModule.forRoot()
   ],
   providers: [],
