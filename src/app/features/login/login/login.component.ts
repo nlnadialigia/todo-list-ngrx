@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import * as fromAppActions from '../../../state/app.actions';
+import { AppState } from './../../../state/app.reducer';
 
 @Component({
   templateUrl: './login.component.html',
@@ -11,11 +13,11 @@ export class LoginComponent implements OnInit {
     name: new FormControl(''),
     email: new FormControl('')
   });
-  constructor(private router: Router) {}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {}
 
   login() {
-    this.router.navigate(['d']);
+    this.store.dispatch(fromAppActions.doLogin(this.form.value));
   }
 }
