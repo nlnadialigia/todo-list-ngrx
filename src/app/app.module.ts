@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './features/login/login.module';
+import { reducer } from './state/app.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,7 @@ import { LoginModule } from './features/login/login.module';
     AppRoutingModule,
     ReactiveFormsModule,
     LoginModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ userContext: reducer }, {}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production
